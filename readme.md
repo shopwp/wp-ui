@@ -1,6 +1,6 @@
-# ShopWP WordPress UI Settings
+# 💽 ShopWP WordPress UI Settings
 
-An attempt to standardize a new WordPress UI for plugin admin pages
+An attempt to standardize WordPress plugin admin settings UI
 
 ## Install
 
