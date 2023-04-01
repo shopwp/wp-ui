@@ -19,7 +19,7 @@
     "ecommerce",
     "woocommerce"
   ],
-  "peerDependencies": {},
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "@emotion/css": "^11.10.6"
+  }
 }
