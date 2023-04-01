@@ -1,7 +1,7 @@
 {
   "name": "@shopwp/wp-ui",
   "version": "7.0.5",
-  "description": "An attempt to standardize a new WordPress UI for plugin admin pages",
+  "description": "An attempt to standardize a new WordPress UI for plugin admin pages.",
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.config.babel.js",
