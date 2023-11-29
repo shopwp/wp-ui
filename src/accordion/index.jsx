@@ -40,15 +40,9 @@ function Accordion({
     }
 
     > div {
-      margin-bottom: 25px;
-
       + [class*="ErrorCSS"] {
         margin-top: -20px;
       }
-    }
-
-    .components-base-control__field + .components-base-control__help {
-      margin-top: -15px;
     }
 
     .components-flex
