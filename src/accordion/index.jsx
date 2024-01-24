@@ -34,6 +34,7 @@ function Accordion({
   const AccordionContentCSS = css`
     padding: 20px 18px 0px 18px;
     width: 100%;
+    box-sizing: border-box;
 
     > [aria-label="Divider"]:first-of-type {
       margin-top: -15px;
