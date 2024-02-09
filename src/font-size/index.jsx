@@ -3,7 +3,10 @@ import { useDebounce } from "@shopwp/hooks"
 function FontSize({ name, label = false, settings, dispatch, translations }) {
   const { useEffect, useState, useRef } = wp.element
   const { FontSizePicker, BaseControl } = wp.components
-  const [localVal, setLocalVal] = useState(getSizeIntFromString(settings[name]))
+  const [localVal, setLocalVal] = useState(() =>
+    getSizeIntFromString(settings[name])
+  )
+
   const debouncedValue = useDebounce(localVal, 100)
   const isFirstRender = useRef(true)
 
@@ -30,7 +33,9 @@ function FontSize({ name, label = false, settings, dispatch, translations }) {
       return settings[name]
     }
 
-    return parseInt(value.split("px")[0])
+    var ook = parseInt(value.split("px")[0])
+
+    return ook
   }
 
   function onChange(newFontSize) {
@@ -38,6 +43,10 @@ function FontSize({ name, label = false, settings, dispatch, translations }) {
   }
 
   function convertToString(value) {
+    if (typeof value === "string" && value.includes("px")) {
+      return value
+    }
+
     return value + "px"
   }
 
@@ -53,9 +62,11 @@ function FontSize({ name, label = false, settings, dispatch, translations }) {
       var newVal = debouncedValue
     }
 
+    var finalVal = convertToString(newVal)
+
     dispatch({
       type: "UPDATE_SETTING",
-      payload: { key: name, value: convertToString(newVal) },
+      payload: { key: name, value: finalVal },
     })
   }, [debouncedValue])
 
