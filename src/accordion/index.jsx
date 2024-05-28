@@ -1,5 +1,3 @@
-import { css } from "@emotion/css"
-
 function Accordion({
   children,
   title,
@@ -31,28 +29,6 @@ function Accordion({
     }
   }
 
-  const AccordionContentCSS = css`
-    padding: 20px 18px 0px 18px;
-    width: 100%;
-    box-sizing: border-box;
-
-    > [aria-label="Divider"]:first-of-type {
-      margin-top: -15px;
-    }
-
-    > div {
-      + [class*="ErrorCSS"] {
-        margin-top: -20px;
-      }
-    }
-
-    .components-flex
-      .components-base-control__field
-      + .components-base-control__help {
-      margin-top: 10px;
-    }
-  `
-
   return (
     <Panel>
       <PanelBody
@@ -64,7 +40,7 @@ function Accordion({
         <Suspense fallback={<Spinner />}>
           {isOpen && (
             <PanelRow>
-              <div className={AccordionContentCSS}>{children}</div>
+              <div className="swp-admin-accordion">{children}</div>
             </PanelRow>
           )}
         </Suspense>
