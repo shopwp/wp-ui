@@ -1,7 +1,7 @@
 {
   "name": "@shopwp/wp-ui",
   "sideEffects": false,
-  "version": "8.9.9",
+  "version": "8.9.10",
   "description": "An attempt to standardize a new WordPress UI for plugin admin pages.",
   "main": "index.js",
   "type": "module",
